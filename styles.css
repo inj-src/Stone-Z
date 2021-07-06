@@ -1,0 +1,599 @@
+@import url("http://fonts.cdnfonts.com/css/road-rage");
+@import url("https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 1170px;
+  margin: auto;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: rgba(189, 189, 189, 0.336);
+}
+
+/* -------------------------navigation bar----------------------------- */
+
+nav {
+  position: sticky;
+  top: 0px;
+  font-family: "Baloo Bhai 2", cursive;
+  display: flex;
+  background: rgba(68, 68, 68, 0.788);
+  z-index: 100;
+  border-bottom: 2px solid rgb(255, 255, 255);
+  border-top: 1px solid rgb(255, 255, 255);
+  height: 50px;
+}
+
+.logo-text {
+  margin-left: min(5rem, 7vw);
+  font-size: clamp(20px, 5.5vw, 30px);
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+.logo {
+  font-size: 1.12em;
+  font-family: "Kaushan Script", cursive;
+  color: rgb(214, 214, 214);
+  padding-left: 10px;
+  padding-bottom: 0.2em;
+}
+nav ul {
+  margin-left: 25vw;
+  display: flex;
+  margin-left: auto;
+  justify-content: center;
+}
+.nav-items {
+  transition: 0.3s;
+  list-style: none;
+  padding: 10px 16px;
+  font-size: 18px;
+  font-weight: 300;
+}
+.nav-items:hover {
+  transform: scale(1.1);
+  transition-timing-function: ease-in-out;
+}
+.nav-bar {
+  width: 102%;
+  height: 2px;
+  background-color: white;
+  border-radius: 170px;
+  display: none;
+  animation-name: nav-bar-animation;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+.nav-items:hover > .nav-bar {
+  animation-timing-function: ease-in-out;
+  display: inherit;
+}
+@keyframes nav-bar-animation {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 102%;
+  }
+}
+.nav-items a {
+  text-decoration: none;
+  color: white;
+}
+.login-reg {
+  display: flex;
+  padding: 10.5px;
+  margin-left: auto;
+  margin-right: min(4rem, 4vw);
+  font-size: clamp(0.8rem, 3.5vw, 15px);
+  align-items: center;
+}
+.login-reg span {
+  transition: 0.2s;
+}
+.login-reg span a {
+  padding: 0 0.3em;
+  margin-right: 10px;
+  text-decoration: none;
+  color: white;
+  border-radius: 0.5em;
+}
+.login-reg span:hover {
+  transition-timing-function: ease-out;
+  transform: scale(0.9);
+}
+.login-reg span:first-child a {
+  background: transparent;
+  border: 2px solid rgb(255, 255, 255);
+}
+.login-reg span:last-child a {
+  color: black;
+  background: rgba(255, 255, 255, 0.719);
+  border: 2px solid rgba(255, 255, 255, 0.151);
+}
+
+/*----------------------Welcom menu---------------------------- */
+
+#wellcome-menu {
+  height: 100vh;
+  position: relative;
+  top: -50px;
+}
+.menu-img {
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  height: 100%;
+  overflow: hidden;
+  background: url(pexels-william-mattey-3768005.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.menu-img img {
+  max-width: 100%;
+}
+.menu-notes {
+  text-align: center;
+  color: white;
+  width: 60vw;
+  margin: auto;
+  padding-bottom: 3rem;
+  font-size: clamp(1.4em, 1.3em + 2vw, 1.85rem);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-30%);
+}
+.menu-wraper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.315), transparent);
+  height: 100%;
+  position: relative;
+}
+.menu-notes h1 {
+  font-family: "Kaushan Script", cursive;
+  font-size: 1.7em;
+}
+.menu-notes p {
+  font-family: "K2D", sans-serif;
+  margin: 16px 43px;
+  color: rgba(255, 255, 255, 0.849);
+  font-size: 0.6em;
+}
+.btn {
+  color: white;
+  background: rgba(116, 116, 116, 0.418);
+  border: 2px solid white;
+  font-family: "Baloo Bhai 2", cursive;
+  padding: 0px 0.7em;
+  font-size: clamp(0.8rem, 0.3rem + 2vw, 1.2rem);
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 30px;
+  transition: 0.4s;
+  border-radius: 6px;
+}
+
+.btn a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.btn:hover {
+  transition-timing-function: ease-in-out;
+  color: black;
+  border: 2px solid black;
+  background-color: rgba(233, 233, 233, 0.849);
+  border-radius: 5px;
+}
+.btn:hover a {
+  color: black;
+  transition-timing-function: ease-in-out;
+}
+.animation-box {
+  background-color: transparent;
+  width: 10px;
+  height: 10px;
+  border-left: 3px solid white;
+  border-bottom: 3px solid white;
+  transform: rotate(-45deg);
+  position: relative;
+  left: 49.7%;
+  top: -5%;
+  transform: translate(0 -51.3%);
+  animation-name: scroll-down;
+  animation-duration: 3.2s;
+  animation-iteration-count: infinite;
+  z-index: 100;
+  display: none;
+}
+@keyframes scroll-down {
+  0% {
+    top: -5%;
+  }
+  72% {
+    top: -5%;
+  }
+  79% {
+    top: -4%;
+  }
+  86% {
+    top: -4.3%;
+  }
+  93% {
+    top: -4%;
+  }
+  100% {
+    top: -5%;
+  }
+}
+
+/* ---------------------Main_Contante--------------------- */
+
+#content {
+  font-family: "K2D", sans-serif;
+  letter-spacing: 1.5px;
+  word-spacing: 1px;
+  margin-top: 10vh;
+  margin-bottom: 12vh;
+  /* display: none; */
+}
+.contante-tags {
+  display: flex;
+  margin-bottom: 12vh;
+  font-size: clamp(1.1rem, 1.1rem + 2.5vw, 1.8rem);
+}
+.contante-tags h1 {
+  width: 50%;
+  font-size: 1.05em;
+}
+.contante-tags div {
+  margin-top: 1rem;
+  width: 11rem;
+  height: 0.4rem;
+  border-radius: 50px;
+  background-color: rgba(137, 43, 226, 0.24);
+}
+.contante-tags p {
+  color: rgb(134, 134, 134);
+  line-height: 1.35rem;
+  width: 45%;
+  font-size: 0.52em;
+  margin-left: auto;
+}
+.product-showcase {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.Main-container {
+  width: 91%;
+  margin: auto;
+}
+.products {
+  background-color: rgb(210 210 210 / 48%);
+  width: 240px;
+  padding: 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.products-img {
+  width: 240px;
+  transition: 0.3s;
+  transition-delay: 1s;
+  position: relative;
+  overflow: hidden;
+}
+.products-img img {
+  max-width: 100%;
+  transition: 0.8s;
+  transition-delay: 0.15s;
+}
+.products-img:hover img {
+  transform: scale(1.15);
+  transition-timing-function: ease-in-out;
+}
+.products h4 {
+  font-size: 1.5rem;
+  padding: 1rem 0;
+}
+.products p {
+  color: rgb(134, 134, 134);
+}
+.products-transition {
+  width: 100%;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.822));
+  position: absolute;
+  top: 0px;
+  color: white;
+  visibility: hidden;
+}
+.products-transition div h3 {
+  margin-top: 85px;
+  margin-left: 25px;
+  text-transform: uppercase;
+}
+.products-transition div span {
+  margin-left: 25px;
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.651);
+}
+.products-img:hover .products-transition {
+  animation-timing-function: ease-in-out;
+  visibility: visible;
+  animation-name: products-transition;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+}
+@keyframes products-transition {
+  from {
+    height: 0%;
+    opacity: 0;
+  }
+  to {
+    height: 100%;
+    opacity: 1;
+  }
+}
+
+/* -----------------------Login/Register----------------------- */
+
+#Login-form {
+  font-family: "K2D", sans-serif;
+  margin-top: 12vh;
+  background: url(Untitled_design.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  /* height: 500px; */
+  padding: 4rem 0;
+  display: flex;
+  align-items: center;
+  margin-bottom: 12vh;
+  /* display: none; */
+}
+.login-form-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* margin-top: 4rem; */
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+  align-items: center;
+  background: linear-gradient(to right, rgba(37, 37, 37, 0.842), transparent);
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 10px 50px;
+  border-radius: 25px 0px 25px 25px;
+  /* font-size: clamp(2rem, 2rem + 2.5vw, 3rem); */
+  /* font-size: clamp(0.1rem, 0.1rem + 2.5vw, 2rem); */
+}
+.login-text {
+  width: 50%;
+  margin-left: 4rem;
+  font-size: clamp(1rem, 1rem + 2.5vw, 2rem);
+}
+.login-text h1 {
+  font-size: 1.3em;
+}
+.login-text p {
+  font-size: 0.4em;
+}
+.form {
+  width: 8em;
+  padding: 0.85em;
+  box-shadow: rgba(255, 255, 255, 0.274) 0px 10px 50px;
+  background-color: #2b2b2bd5;
+  height: 350px;
+  border-radius: 25px 0px 25px 0px;
+  font-size: clamp(1.3rem, 1.3rem + 2.5vw, 2rem);
+}
+.form h2 {
+  font-size: 1em;
+  margin-bottom: 0.8em;
+}
+.Email {
+  display: block;
+  font-size: 0.6em;
+}
+.Password {
+  font-size: 0.6em;
+}
+.form input {
+  width: 95%;
+  border-radius: 5px;
+  border: 0px;
+  padding: 0.47rem;
+  margin-top: 1em;
+  display: block;
+  transition: 0.3s;
+  border: 1px solid white;
+}
+.form input:hover {
+  background-color: rgba(56, 56, 56, 0.849);
+  transition-timing-function: ease-in-out;
+  color: white;
+}
+.login-btn {
+  margin-top: 1.3em;
+  border-radius: 5px;
+  background-color: transparent;
+  font-size: 0.45em;
+  padding: 0.15em 0.7em;
+}
+.login-btn:hover {
+  background-color: transparent;
+  color: rgb(173, 173, 173);
+  border: 2px solid rgb(172, 172, 172);
+  font-weight: 500;
+}
+.form p {
+  /* display: inline-block; */
+  margin-top: 30em;
+  width: max-content;
+  margin: auto;
+  color: rgb(196, 196, 196);
+  font-size: 0.5em;
+  /* display: inline-block; */
+}
+.form p a {
+  display: block;
+  /* padding: 0px 2.2em; */
+  color: rgb(126, 126, 126);
+  transition: 0.3s;
+  width: max-content;
+  margin: auto;
+}
+.form p a:hover {
+  color: rgb(230, 230, 230);
+  transition-timing-function: ease-in-out;
+}
+.form i {
+  padding: 0px 0.4em;
+  font-size: 0.6em;
+  margin-left: 0.35em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.form i:hover {
+  color: rgb(173, 173, 173);
+  transition-timing-function: ease-in-out;
+}
+.login-line {
+  background-color: white;
+  width: 66%;
+  height: 1px;
+  margin-left: 32%;
+}
+.or {
+  margin-left: 60%;
+  font-size: 0.65em;
+  /* margin-top: 2px; */
+  display: inline-block;
+  transform: translateY(-12px);
+}
+
+/* -----------------Footter-Section--------------- */
+
+#footter {
+  background-color: black;
+  padding-top: calc(25px + 0.7vw);
+  word-spacing: 0.1rem;
+  /* display: none; */
+}
+.footer-container {
+  font-family: "Saira Condensed", sans-serif;
+  color: white;
+}
+.fotter-main {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+  padding-bottom: calc(25px + 0.7vw);
+  height: 22vw;
+  align-items: center;
+}
+.fotter-left {
+  display: flex;
+  align-items: center;
+  width: 30%;
+  justify-content: space-between;
+  /* flex-wrap: wrap; */
+  font-size: clamp(0.5rem, 0.5rem + 2vw, 2rem);
+}
+.fotter-left h1 {
+  display: inline;
+  font-size: 1em;
+}
+.fotter-left span {
+  font-size: 0.5em;
+}
+.fotter-left span i {
+  font-size: 2.5em !important;
+}
+
+.fotter-right {
+  /* background-color: rgb(41, 82, 0); */
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  align-items: center;
+  font-size: clamp(0.5rem, 0.5rem + 2.5vw, 2rem);
+  /* height: 20vw; */
+}
+.ul-separator {
+  width: 1px;
+  height: 145px;
+  background: white;
+}
+.ul-separator-big {
+  width: 1px;
+  height: 16vw;
+  background: white;
+  align-self: center;
+}
+.fotter-right ul {
+  list-style: none;
+}
+.fotter-right ul li {
+  color: rgb(161, 161, 161);
+  transition: 0.3s;
+  font-size: 0.52em;
+}
+.fotter-right ul li:hover {
+  color: white;
+  cursor: pointer;
+}
+.fotter-right ul li:first-child {
+  margin-bottom: 2px;
+  font-size: 0.8em;
+  color: rgb(255, 255, 255);
+}
+.fotter-right ul li i {
+  margin-left: 10px;
+}
+.footer-social {
+  background-color: rgb(77, 77, 77);
+  height: 3rem;
+  display: flex;
+  border-bottom: 20px solid rgba(61, 61, 61, 0.644);
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2vw;
+  border-top: 1px solid rgb(119, 119, 119);
+  font-size: clamp(0.7rem, 0.7rem + 2vw, 2rem);
+}
+
+.footer-social span {
+  font-size: 0.5em;
+  /* width: 80%; */
+}
+.footer-social div {
+  font-size: clamp(0.5rem, 0.5rem + 2vw, 2rem);
+  margin-left: 15px;
+  display: flex;
+}
+.footer-social i {
+  padding: 0 0.5em;
+  font-size: 0.7em;
+  transition: 0.3s;
+}
+.footer-social i:hover {
+  color: #adadad;
+  cursor: pointer;
+}

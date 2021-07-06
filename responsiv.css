@@ -1,0 +1,228 @@
+/*------------ nav-bar------------- */
+
+@media only screen and (max-width: 900px) {
+  nav ul {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .login-reg {
+    margin-right: 4px;
+  }
+  .logo-text {
+    margin-left: 10px;
+  }
+}
+
+/*------------ nav-bar------------- */
+
+/* ====================================================================================================================== */
+
+/*------------ menu-notes------------- */
+
+@media only screen and (max-width: 1200px) {
+  .menu-notes {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .menu-notes {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-height: 910px) {
+  .animation-box {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .menu-notes {
+    width: 85%;
+  }
+  .animation-box {
+    background-color: transparent;
+    width: 8px;
+    height: 8px;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .menu-notes h1 {
+    font-size: 1.2em;
+  }
+}
+
+@media only screen and (min-height: 900px) {
+  #wellcome-menu {
+    height: 900px;
+  }
+}
+
+/*------------ menu-notes------------- */
+
+/* ====================================================================================================================== */
+
+/*------------ main-content------------- */
+
+@media only screen and (max-width: 1331px) {
+  .product-showcase {
+    width: 614px;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 673px) {
+  .product-showcase {
+    width: 50%;
+    margin: auto;
+  }
+  .contante-tags {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 4rem;
+  }
+  .contante-tags h1,
+  .contante-tags p {
+    width: 100%;
+  }
+  .Main-container {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .product-showcase {
+    gap: 0px;
+  }
+  .products {
+    transform: scale(0.8);
+  }
+}
+
+/*------------ main-content------------- */
+
+/* ====================================================================================================================== */
+
+/*------------ login-Form------------- */
+
+@media only screen and (max-width: 880px) {
+  .login-form-container {
+    flex-direction: column;
+    background: linear-gradient(
+      to right,
+      rgba(37, 37, 37, 0.842),
+      rgba(0, 0, 0, 0.37),
+      rgba(37, 37, 37, 0.842)
+    );
+    border-radius: 25px;
+  }
+  .login-text {
+    margin-left: 0rem;
+    margin: auto;
+    text-align: center;
+    width: 80%;
+    margin: 4rem 0;
+  }
+  .form {
+    margin: auto;
+    margin-bottom: 4rem;
+    border-radius: 25px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .login-text {
+    margin-bottom: 2rem;
+  }
+  .form {
+    /* transform: scale(0.95); */
+    margin-bottom: 2rem;
+  }
+  .login-text h1 {
+    font-size: 1.1em;
+    text-align: left;
+    margin-bottom: 0.5em;
+  }
+  .login-text p {
+    font-size: 0.5em;
+    text-align: left;
+  }
+}
+
+@media only screen and (max-width: 310px) {
+  .form {
+    /* transform: scale(0.8); */
+    margin-bottom: 0rem;
+    transform: scale(0.8);
+    margin: auto;
+    position: relative;
+    left: -8px;
+  }
+}
+
+/*------------ login-Form------------- */
+
+/* ====================================================================================================================== */
+
+/*------------ Footter-Section------------- */
+
+@media only screen and (max-width: 1290px) {
+  .fotter-left {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .fotter-left h1 {
+    /* margin-left: auto; */
+    margin-right: auto;
+    font-size: 1em;
+    margin-left: 4vw;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .ul-separator {
+    display: none;
+  }
+  .fotter-right {
+    flex-direction: column;
+    align-items: inherit;
+    width: max-content;
+    justify-content: inherit;
+  }
+  .fotter-left h1 {
+    /* margin-left: auto; */
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .fotter-left {
+    text-align: center;
+  }
+  .fotter-right ul li {
+    display: none;
+  }
+  .fotter-right ul li:first-child {
+    display: inherit;
+    width: max-content;
+    margin-bottom: 2px;
+  }
+  .ul-separator-big:last-child {
+    visibility: hidden;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .footer-social div {
+    width: max-content;
+    flex-direction: row;
+  }
+}
+
+/*------------ Footter-Section------------- */
+
+/* ====================================================================================================================== */
